@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <style>
+        .loginBox input[type="submit"]:hover {
+            background: white;
+            border: 4px solid #59238F;
+            color: #59238F;
+            font-weight: bolder;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="loginBox">
+        <img class="user" src="https://i.ibb.co/yVGxFPR/2.png" height="100px" width="100px">
+        <h3 style="font-size: 22px; padding: 0px;">Login here</h3>
+        <form method="POST" action="" style="text-align:center; margin: 20px;">
+            {{ form.hidden_tag() }}
+
+            <div class="container"><br>
+                <label for="uname"><b>Username</b></label>{{ form.username }}<br>
+                <label for="psw"><b>Password</b></label>{{ form.password }}<br>
+                <button type="submit" style="width: 55%; border: none; background-color: white;">
+                    {{ form.submit}}
+                </button>
+                <br>
+                <a href="{{url_for('register')}}" onMouseOver="this.style.color='#ff612b'"
+                    onMouseOut="this.style.color='#262626'" style="font-size: 16px;">Don't have an account? Register
+                    Here</a><br>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
